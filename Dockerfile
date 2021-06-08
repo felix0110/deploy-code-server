@@ -19,6 +19,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # You can add custom software and dependencies for your environment here. Some examples:
 
 RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension eamodio.gitlens
+RUN code-server --install-extension CoenraadS.bracket-pair-colorizer
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
 
