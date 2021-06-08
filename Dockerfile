@@ -23,6 +23,10 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension CoenraadS.bracket-pair-colorizer
+RUN code-server --install-extension mikestead.dotenv
+RUN code-server --install-extension christian-kohler.path-intellisense
+
+
 
 RUN sudo apt-get install -y nodejs
 RUN sudo apt install -y npm
