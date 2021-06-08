@@ -13,17 +13,19 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
-RUN rclone config
-RUN cat $(rclone config file | sed -n 2p) | base64 --wrap=0
+# RUN rclone config
+# RUN cat $(rclone config file | sed -n 2p) | base64 --wrap=0
 
 # Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment here. Some examples:
-
 RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension CoenraadS.bracket-pair-colorizer
+
+RUN sudo apt install nodejs
+
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
 
