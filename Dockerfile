@@ -25,6 +25,7 @@ RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension CoenraadS.bracket-pair-colorizer
 
 RUN sudo apt-get install -y nodejs
+RUN sudo apt install npm
 
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
