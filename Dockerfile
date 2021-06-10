@@ -26,11 +26,12 @@ RUN code-server --install-extension CoenraadS.bracket-pair-colorizer
 RUN code-server --install-extension mikestead.dotenv
 RUN code-server --install-extension christian-kohler.path-intellisense
 
-
-
+# Install nodejs
 RUN sudo apt-get install -y nodejs
 RUN sudo apt install -y npm
 
+RUN git config --global user.name "felixwong"
+RUN git config --global user.email "felix011018@gmail.com"
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
 
